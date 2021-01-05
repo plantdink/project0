@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Noughts & Crosses</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>@import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Bungee+Hairline&family=Bungee&display=swap');</style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <nav>
+        <ul>
+          <li>Home</li>
+          <li>Page</li>
+        </ul>
+        <h1 class="banner-title">Tic Tac Toe</h1>
+      </nav>
+    </header>
+
+    <section>
+      <div class="score-board">
+        <div id="playerX-label" class="badge">Player X</div>
+        <div id="playerO-label" class="badge">Player O</div>
+        <span id="playerX-score">0</span> : <span id="playerO-score">0</span>
+      </div>
+    </section>
+
+    <section>
+      <div class="game-board">
+        <div game-cell-index="0" class="cell"></div>
+        <div game-cell-index="1" class="cell"></div>
+        <div game-cell-index="2" class="cell"></div>
+        <div game-cell-index="3" class="cell"></div>
+        <div game-cell-index="4" class="cell"></div>
+        <div game-cell-index="5" class="cell"></div>
+        <div game-cell-index="6" class="cell"></div>
+        <div game-cell-index="7" class="cell"></div>
+        <div game-cell-index="8" class="cell"></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="">
+          <h2 class="game-status"></h2>
+        <button class="game-reset" type="button" name="button">Reset Game</button>
+        <button class="score-reset" type="button" name="button">Reset Scores</button>
+        <!-- <button class="score-plus" type="button" name="button">Plus Scores</button> -->
+      </div>
+    </section>
+
+    <footer>
+      <p>Basic info will go here</p>
+    </footer>
+  </div>
+  <script src="js/tictactoe.js"></script>
+</body>
+</html>

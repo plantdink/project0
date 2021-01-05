@@ -1,0 +1,90 @@
+body {
+  font-family: "Bungee Hairline", cursive;
+  font-size: 20px;
+  color: #E0E1DD;
+  background-color: #1B263B;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 960px;
+  border: 3px solid #0D1B2A;
+  margin: 0 auto;
+
+}
+
+section {
+  text-align: center;
+}
+
+nav {
+  text-align: right;
+}
+
+header {
+  color: #778DA9;
+  background-color: #0D1B2A;
+}
+
+.banner-title {
+  font-family: 'Bungee Outline', cursive;
+  font-size: 100px;
+  text-align: center;
+  padding: 10px;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  width: 330px;
+  margin: 50px auto;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  box-shadow: 0 0 0 2px #415A77;
+  border: 5px solid #415A77;
+  cursor: pointer;
+  line-height: 100px;
+  font-size: 80px;
+}
+
+.score-board {
+  margin: 20px auto;
+  border: 5px solid #415A77;
+  border-radius: 0 2px 2px 0;
+  background-color: #415A77;
+  text-align: center;
+  width: 400px;
+  font-size: 65px;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.badge {
+  background: #e2584d;
+  font-size: 33px;
+  padding: 2px 5px;
+}
+
+#player1-label {
+  position: absolute;
+  border-radius: 2px 0 0 0;
+  top: -55px;
+  left: -4px;
+}
+
+#player2-label {
+  position: absolute;
+  border-radius: 0 2px 0 0;
+
+  top: -55px;
+  right: -5px;
+}
+
+footer {
+  background-color: #0D1b2A;
+  margin-bottom: 3em;
+}
