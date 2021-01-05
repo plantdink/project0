@@ -6,15 +6,15 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Noughts & Crosses</title>
   <link rel="stylesheet" href="css/styles.css">
-  <style>@import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Bungee+Hairline&family=Bungee&display=swap');</style>
 </head>
+
 <body>
   <div class="container">
     <header>
       <nav>
-        <ul>
-          <li>Home</li>
-          <li>Page</li>
+        <ul class="nav-bar">
+          <li><a href="">Game</a></li>
+          <li><a href="">History</a></li>
         </ul>
         <h1 class="banner-title">Tic Tac Toe</h1>
       </nav>
@@ -25,6 +25,12 @@
         <div id="playerX-label" class="badge">Player X</div>
         <div id="playerO-label" class="badge">Player O</div>
         <span id="playerX-score">0</span> : <span id="playerO-score">0</span>
+      </div>
+
+      <div class="status">
+        <p>
+          <h2 class="status-message"></h2>
+        </p>
       </div>
     </section>
 
@@ -43,11 +49,9 @@
     </section>
 
     <section>
-      <div class="">
-          <h2 class="game-status"></h2>
+      <div class="reset">
         <button class="game-reset" type="button" name="button">Reset Game</button>
         <button class="score-reset" type="button" name="button">Reset Scores</button>
-        <!-- <button class="score-plus" type="button" name="button">Plus Scores</button> -->
       </div>
     </section>
 

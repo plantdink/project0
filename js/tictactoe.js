@@ -1,25 +1,23 @@
 //console.log("Hello world");
 
 //This is the game status element
-
-const statusDisplay = document.querySelector('.game-status');
+const statusDisplay = document.querySelector('.status-message');
 
 //these are variables to track the game state during each game
 let gameActive = true;
 let currentPlayer = "X";
 let gameState = ["", "", "", "", "", "", "", "", ""];
-let currentScore = 0;
 let playerXScore = 0;
 let playerOScore = 0;
 
 //these are the scoreboard elements
-const playerXScore_span = document.getElementById('playerX-score');
-const playerOScore_span = document.getElementById('playerO-score');
+const playerXScoreSpan = document.getElementById('playerX-score');
+const playerOScoreSpan = document.getElementById('playerO-score');
 
 //messages to display to the players
-const winningMessage = () => `Player ${currentPlayer} has won!!`;
+const winningMessage = () => `${currentPlayer} has won!!`;
 const drawMessage = () => `Tied!! The game is a draw.`;
-const currentPlayerTurn = () => `It is ${currentPlayer}'s turn`;
+const currentPlayerTurn = () => `${currentPlayer}.....your turn`;
 
 //display the initial message to let players know whose turn it is
 statusDisplay.innerHTML = currentPlayerTurn();
@@ -47,8 +45,14 @@ function playerChange() {
 }
 
 function incrementScore() {
-  currentScore = currentPlayer === "X" ? playerXScore : playerOScore;
-  currentStore++;
+  if (currentPlayer === "X"){
+    playerXScore++;
+  } else {
+    playerOScore++;
+  }
+  playerXScoreSpan.innerHTML = playerXScore;
+  playerOScoreSpan.innerHTML = playerOScore;
+  return;
 }
 
 function resultCheck() {
@@ -68,10 +72,9 @@ function resultCheck() {
   }
 
   if (roundWon) {
-    // playerXScore++;
-    // playerXScore_span.innerHTML = playerXScore;
     statusDisplay.innerHTML = winningMessage();
     gameActive = false;
+    incrementScore();
     return;
   }
 
@@ -83,6 +86,7 @@ function resultCheck() {
   }
 
   playerChange();
+
 }
 
 function cellClick(clickedCellEvent) {
@@ -110,8 +114,10 @@ function resetGame() {
 }
 
 function resetScores() {
-  playerXScore_span.innerHTML = 0;
-  playerOScore_span.innerHTML = 0;
+  playerXScore = 0;
+  playerOScore = 0;
+  playerXScoreSpan.innerHTML = 0;
+  playerOScoreSpan.innerHTML = 0;
 }
 
 //event listeners for the game cells
@@ -120,5 +126,3 @@ document.querySelectorAll('.cell').forEach(cell => cell.addEventListener('click'
 document.querySelector('.game-reset').addEventListener('click', resetGame);
 //event listener for the score reset button
 document.querySelector('.score-reset').addEventListener('click', resetScores);
-
-// document.querySelector('.score-plus').addEventListener('click', incrementScore)

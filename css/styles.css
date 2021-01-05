@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Bungee+Hairline&family=Bungee&display=swap');
+
 body {
+  box-sizing: border-box;
   font-family: "Bungee Hairline", cursive;
   font-size: 20px;
   color: #E0E1DD;
@@ -11,44 +14,50 @@ body {
   max-width: 960px;
   border: 3px solid #0D1B2A;
   margin: 0 auto;
-
 }
 
 section {
   text-align: center;
 }
 
-nav {
-  text-align: right;
+ul {
+  list-style-type: none;
+  margin: 0 0 10px 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  display: inline-block;
+}
+
+li a {
+  color: #778DA9;
+  font-size: 22px;
+  text-align: left;
+  text-decoration: none;
+  padding: .5em 1em;
+}
+
+li a:hover {
+  color: #0D1B2A;
+  background-color: #778DA9;
 }
 
 header {
   color: #778DA9;
   background-color: #0D1B2A;
+  padding: 10px 0 0 0;
 }
 
 .banner-title {
+  padding-bottom: .2em;
+  margin-top: 0;
+  margin-bottom: 1em;
+  border-bottom: 1em;
   font-family: 'Bungee Outline', cursive;
   font-size: 100px;
   text-align: center;
-  padding: 10px;
-}
-
-.game-board {
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  width: 330px;
-  margin: 50px auto;
-}
-
-.cell {
-  width: 100px;
-  height: 100px;
-  box-shadow: 0 0 0 2px #415A77;
-  border: 5px solid #415A77;
-  cursor: pointer;
-  line-height: 100px;
-  font-size: 80px;
 }
 
 .score-board {
@@ -69,19 +78,56 @@ header {
   padding: 2px 5px;
 }
 
-#player1-label {
+#playerX-label {
   position: absolute;
   border-radius: 2px 0 0 0;
   top: -55px;
   left: -4px;
 }
 
-#player2-label {
+#playerO-label {
   position: absolute;
   border-radius: 0 2px 0 0;
-
   top: -55px;
   right: -5px;
+}
+
+.status {
+  font-size: 25px;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  width: 330px;
+  margin: 40px auto;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  box-shadow: 0 0 0 2px #415A77;
+  border: 5px solid #415A77;
+  cursor: pointer;
+  line-height: 100px;
+  font-size: 80px;
+}
+
+.reset > button {
+  margin-top: 5px;
+  background-color: #415A77;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  font-family: "Bungee Hairline", cursive;
+  font-size: 20px;
+  color: #E0E1DD;
+  transition: all 1s ease;
+}
+
+.reset > button:hover {
+  cursor: pointer;
+  background: red;
 }
 
 footer {
