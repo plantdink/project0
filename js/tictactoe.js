@@ -83,7 +83,7 @@ $(document).ready(function(){
       return;
     }
 
-    //this function loops through the winningConditions array & compares to see if any of the arrays match
+    //this function loops through the winningConditions array & compares to see if any of the arrays combinations match
     function resultCheck() {
       let roundWon = false;
       for (let i = 0; i <= 7; i++) {
