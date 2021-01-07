@@ -1,72 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Tic-Tac-Toe</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-  <link rel="stylesheet" href="css/styles.css">
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
 
-<body>
-  <div class="container">
-    <header>
-      <nav>
-        <ul class="nav-bar">
-          <li><a href="history.html">History</a></li>
-        </ul>
-      </nav>
-    </header>
+  <body>
+    <div class="container">
+      <header>
+        <nav>
+          <ul class="nav-bar">
+            <li><a href="history.html">History</a></li>
+          </ul>
+        </nav>
+      </header>
 
-    <div class="title-bar">
-      <h1 class="banner-title">Tic-Tac-Toe</h1>
+      <div class="title-bar">
+        <h1 class="banner-title">Tic-Tac-Toe</h1>
+      </div>
+
+      <section>
+        <div class="score-board">
+          <div id="playerX-label" class="badge">Player X</div>
+          <div id="playerO-label" class="badge">Player O</div>
+          <span id="playerX-score">0</span> : <span id="playerO-score">0</span>
+        </div>
+
+        <div class="status">
+          <h2 class="status-message"></h2>
+        </div>
+      </section>
+
+      <section>
+        <div class="game-board">
+          <div game-cell-index="0" class="cell"></div>
+          <div game-cell-index="1" class="cell"></div>
+          <div game-cell-index="2" class="cell"></div>
+          <div game-cell-index="3" class="cell"></div>
+          <div game-cell-index="4" class="cell"></div>
+          <div game-cell-index="5" class="cell"></div>
+          <div game-cell-index="6" class="cell"></div>
+          <div game-cell-index="7" class="cell"></div>
+          <div game-cell-index="8" class="cell"></div>
+        </div>
+      </section>
+
+      <section>
+        <div class="reset">
+          <button class="game-reset" type="button" name="button">Reset Game</button>
+          <button class="score-reset" type="button" name="button">Reset Scores</button>
+        </div>
+      </section>
+
+      <section>
+        <blockquote cite="http://">
+          There are 255,168 possible outcomes to a game of Tic Tac Toe.
+        </blockquote>
+      </section>
+
+      <footer>
+        <p></p>
+      </footer>
     </div>
-
-    <section>
-      <div class="score-board">
-        <div id="playerX-label" class="badge">Player X</div>
-        <div id="playerO-label" class="badge">Player O</div>
-        <span id="playerX-score">0</span> : <span id="playerO-score">0</span>
-      </div>
-
-      <div class="status">
-        <h2 class="status-message"></h2>
-      </div>
-    </section>
-
-    <section>
-      <div class="game-board">
-        <div game-cell-index="0" class="cell"></div>
-        <div game-cell-index="1" class="cell"></div>
-        <div game-cell-index="2" class="cell"></div>
-        <div game-cell-index="3" class="cell"></div>
-        <div game-cell-index="4" class="cell"></div>
-        <div game-cell-index="5" class="cell"></div>
-        <div game-cell-index="6" class="cell"></div>
-        <div game-cell-index="7" class="cell"></div>
-        <div game-cell-index="8" class="cell"></div>
-      </div>
-    </section>
-
-    <section>
-      <div class="reset">
-        <button class="game-reset" type="button" name="button">Reset Game</button>
-        <button class="score-reset" type="button" name="button">Reset Scores</button>
-      </div>
-    </section>
-
-    <section>
-      <blockquote cite="http://">
-        There are 255,168 possible outcomes to a game of Tic Tac Toe.
-      </blockquote>
-    </section>
-
-    <footer>
-      <p></p>
-    </footer>
-  </div>
-  <script src="http://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-  <script src="js/tictactoe.js"></script>
-</body>
+    <script src="http://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="js/tictactoe.js"></script>
+  </body>
 </html>

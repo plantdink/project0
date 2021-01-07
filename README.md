@@ -5,7 +5,7 @@ This project is a in-browser game of Tic-Tac-Toe.
 
 ## Installing / Getting started
 
-You will need a working browser (which if you can see this readme file you probably already have)
+You will need a working browser (which if you can see this readme file you probably already have).
 
 ### Initial Configuration
 
@@ -13,23 +13,17 @@ This project requires no initial configuration.
 
 ## Developing
 
-Here's a brief intro about what a developer must do in order to start developing the project further:
+Project Zero requires no special environment to start developing it further, simply a text editor.
 
-```shell
-git clone https://github.com/your/awesome-project.git
-cd awesome-project/
-packagemanager install
-```
-
-And state what happens step-by-step.
+Hav at it & best of luck.
 
 ### Building
 
-Once you have made any change to the code, you will need to refresh the page to see them live
+Once you have made any change to the code, you will need to refresh the page to see them live.
 
 ### Deploying / Publishing
 
-Project Zero needs to be hosted
+Project Zero is a small interactive web page and needs to be hosted on an approriate platform.
 
 ## Features
 
@@ -46,13 +40,15 @@ I am very new to coding in general so the code style is chaotic, be warned. If y
 
 ## Links
 
-- Project homepage: https://your.github.com/awesome-project/
-- Repository: https://github.com/your/awesome-project/
-- Issue tracker: https://github.com/your/awesome-project/issues
-  - In case of sensitive bugs like security vulnerabilities, please contact my@email.com directly instead of using issue tracker. We value your effort to improve the security and privacy of this project!
+- Project homepage: https://plantdink.github.io/project0/
+- Repository: https://github.com/plantdink/project0
+- Issue tracker: https://github.com/plantdink/project0/issues
 
 - Project Dependancies:
-  - JQuery: https://github.com/your/other-project/
+This project has some small jQuery dependacies, and uses the animate.css package for some of the small animations.
+Neither package is included, the project files link to a CDN.
+
+  - JQuery: http://code.jquery.com/
   - animate.css: https://animate.style/
 
 

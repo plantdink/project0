@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Bungee+Hairline&family=Bungee&display&family=Roboto:wght@300;400&display=swap');
 
-/* ||General Styles */
+/* || General Styles */
 
 body {
   font-family: "Bungee Hairline", cursive;
@@ -52,10 +52,6 @@ ul {
   vertical-align: top;
 }
 
-li {
-  /* display: inline-block; */
-}
-
 .information {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
@@ -88,7 +84,7 @@ li a:hover {
 }
 
 
-/* || Scoreboard */
+/* || Scoreboard & Player labels */
 
 .score-board {
   margin: 20px auto;
@@ -125,7 +121,7 @@ li a:hover {
 }
 
 
-/* || Status message */
+/* || Game status message area */
 
 .status {
   font-size: 25px;
@@ -152,7 +148,7 @@ li a:hover {
 }
 
 
-/* || Reset */
+/* || Reset button section */
 .reset {
   margin-bottom: 1.6em;
 }
@@ -174,7 +170,7 @@ li a:hover {
   background: red;
 }
 
-/* || Blockquote from here */
+/* || Blockquote area */
 
 blockquote {
   background: #778DA9;
@@ -203,7 +199,7 @@ blockquote p {
 }
 
 
-/* || Footer */
+/* || Footer area */
 
 footer {
   margin: auto;
