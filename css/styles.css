@@ -37,14 +37,10 @@ h1 {
   font-size: 6em;
 }
 
-.information {
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  padding: 1em;
-}
-
 p {
+  padding-bottom: 1em;
   text-align: left;
+  margin: 0 auto;
   line-height: 1.5em;
 }
 
@@ -60,7 +56,11 @@ li {
   /* display: inline-block; */
 }
 
-
+.information {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  padding: 1em;
+}
 
 
 /* ||Header & Main navigation */
@@ -174,15 +174,46 @@ li a:hover {
   background: red;
 }
 
+/* || Blockquote from here */
+
+blockquote {
+  background: #778DA9;
+  border-left: .5em solid #415A77;
+  margin: 1.5em 10px;
+  font-size: 150%;
+  font-weight: bold;
+  text-align: center;
+  padding: 1em;
+  color: #0D1B2A;
+  margin-block-end: 1em;
+}
+
+blockquote:before {
+  color: #415A77;
+  content: open-quote;
+  font-size: 5em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+blockquote p {
+  display: inline;
+  color: #0D1B2A;
+}
+
 
 /* || Footer */
 
 footer {
-  text-align: center;
+  margin: auto;
+  height: 100px;
   background-color: #0D1b2A;
-  height: 150px;
-  padding-left: .5em;
-  padding-right: .5em;
+  padding: 1em;
+}
+
+footer p {
+  text-align: center;
 }
 
 /* || Utilities */

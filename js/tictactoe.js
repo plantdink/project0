@@ -14,11 +14,19 @@ $(document).ready(function(){
     //these are the scoreboard elements
     const playerXScoreSpan = document.getElementById('playerX-score');
     const playerOScoreSpan = document.getElementById('playerO-score');
+    const scoreBoard = document.querySelector('.score-board');
 
     //messages to display to the players
     const winningMessage = () => `${currentPlayer} has won!!`;
     const drawMessage = () => `Tied!! The game is a draw.`;
     const currentPlayerTurn = () => `${currentPlayer}.....your turn`;
+
+    //animation event for the scoreboard intital load
+    scoreBoard.classList.add('animate__animated', 'animate__rubberBand');
+    scoreBoard.addEventListener('animationend', () => {
+      scoreBoard.classList.remove('animate__animated', 'animate__rubberBand');
+    });
+
 
     //display the initial message to let players know whose turn it is
     statusDisplay.innerHTML = currentPlayerTurn();
@@ -40,8 +48,22 @@ $(document).ready(function(){
       clickedCell.innerHTML = currentPlayer;
     }
 
-    const scoreBoard = document.querySelector('.score-board');
-    scoreBoard.classList.add('animate__animated', 'animate__rubberBand');
+    //animate.css function to allow animation events to be added
+    const animateCSS = (element, animation, prefix = 'animate__') =>
+     new Promise((resolve, reject) => {
+      const animationName = `${prefix}${animation}`;
+      const node = document.querySelector(element);
+
+      node.classList.add(`${prefix}animated`, animationName);
+
+      function handleAnimationEnd(event) {
+        event.stopPropagation();
+        node.classList.remove(`${prefix}animated`, animationName);
+        resolve('Animation ended');
+      }
+
+      node.addEventListener('animationend', handleAnimationEnd, {once: true});
+    });
 
     function playerChange() {
       currentPlayer = currentPlayer === "X" ? "O" : "X";
@@ -78,6 +100,7 @@ $(document).ready(function(){
       if (roundWon) {
         statusDisplay.innerHTML = winningMessage();
         gameActive = false;
+        animateCSS('.score-board', 'rubberBand');
         incrementScore();
         return;
       }
@@ -107,27 +130,7 @@ $(document).ready(function(){
       resultCheck();
     }
 
-    const animateCSS = (element, animation, prefix = 'animate__') =>
-        // We create a Promise and return it
-      return new Promise((resolve, reject) => {
-        const animationName = `${prefix}${animation}`;
-        const node = document.querySelector(element);
-
-        node.classList.add(`${prefix}animated`, animationName);
-
-        // When the animation ends, we clean the classes and resolve the Promise
-        function handleAnimationEnd(event) {
-          event.stopPropagation();
-          node.classList.remove(`${prefix}animated`, animationName);
-          resolve('Animation ended');
-        }
-
-        node.addEventListener('animationend', handleAnimationEnd, {once: true});
-    });
-
-
     function resetGame() {
-      animateCSS('.score-board', 'rubberBand');
       gameActive = true;
       currentPlayer = "X";
       gameState = ["", "", "", "", "", "", "", "", ""];
@@ -146,6 +149,7 @@ $(document).ready(function(){
     document.querySelectorAll('.cell').forEach(cell => cell.addEventListener('click', cellClick));
     //event listener for the restart button
     $('.game-reset').click(resetGame);
+
     //event listener for the score reset button
     $('.score-reset').click(resetScores);
 
