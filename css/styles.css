@@ -1,6 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Bungee+Hairline&family=Bungee&display&family=Roboto:wght@300;400&display=swap');
 
-/* || General Styles */
+/* Table of contents
+  1. General styles
+  2. Typography
+  3. Layout
+    a. Scoreboard
+    b. Game board
+  4. Components
+ */
+
+/* ===================
+|| 1. General styles
+    =================== */
 
 body {
   font-family: "Bungee Hairline", cursive;
@@ -27,8 +38,9 @@ header {
   padding-top: 10px;
 }
 
-
-/* || Typography */
+/* ===================
+|| 2. Typography
+    =================== */
 
 h1 {
   margin: 0;
@@ -52,15 +64,6 @@ ul {
   vertical-align: top;
 }
 
-.information {
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  padding: 1em;
-}
-
-
-/* ||Header & Main navigation */
-
 li a {
   color: #778DA9;
   font-size: 22px;
@@ -74,6 +77,28 @@ li a:hover {
   background-color: #778DA9;
 }
 
+blockquote p {
+  display: inline;
+  color: #0D1B2A;
+}
+
+footer p {
+  text-align: center;
+}
+
+.information {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  padding: 1em;
+}
+
+.status {
+  font-size: 25px;
+}
+
+/* ===================
+|| 3. Layout
+    =================== */
 .title-bar {
   margin-top: 0;
   margin-bottom: 4em;
@@ -83,8 +108,7 @@ li a:hover {
   text-align: center;
 }
 
-
-/* || Scoreboard & Player labels */
+/* || 3a. Scoreboard */
 
 .score-board {
   margin: 20px auto;
@@ -120,15 +144,7 @@ li a:hover {
   right: -5px;
 }
 
-
-/* || Game status message area */
-
-.status {
-  font-size: 25px;
-}
-
-
-/* || Gameboard */
+/* || 3b. Game board */
 
 .game-board {
   display: grid;
@@ -147,30 +163,9 @@ li a:hover {
   font-size: 80px;
 }
 
-
-/* || Reset button section */
 .reset {
   margin-bottom: 1.6em;
 }
-
-.reset > button {
-  margin-top: 5px;
-  background-color: #415A77;
-  border: 0;
-  padding: 15px 32px;
-  text-align: center;
-  font-family: "Bungee Hairline", cursive;
-  font-size: 20px;
-  color: #E0E1DD;
-  transition: all 1s ease;
-}
-
-.reset > button:hover {
-  cursor: pointer;
-  background: red;
-}
-
-/* || Blockquote area */
 
 blockquote {
   background: #778DA9;
@@ -193,14 +188,6 @@ blockquote:before {
   vertical-align: -0.4em;
 }
 
-blockquote p {
-  display: inline;
-  color: #0D1B2A;
-}
-
-
-/* || Footer area */
-
 footer {
   margin: auto;
   height: 100px;
@@ -208,10 +195,23 @@ footer {
   padding: 1em;
 }
 
-footer p {
+/* ===================
+|| 4. Components
+    =================== */
+
+.reset > button {
+  margin-top: 5px;
+  background-color: #415A77;
+  border: 0;
+  padding: 15px 32px;
   text-align: center;
+  font-family: "Bungee Hairline", cursive;
+  font-size: 20px;
+  color: #E0E1DD;
+  transition: all 1s ease;
 }
 
-/* || Utilities */
-
-/* || SiteWide */
+.reset > button:hover {
+  cursor: pointer;
+  background: red;
+}
